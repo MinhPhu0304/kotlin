@@ -183,6 +183,7 @@ open class KotlinStackFrame(stackFrameDescriptorImpl: StackFrameDescriptorImpl) 
                 || getInlineDepth(variable.name()) != inlineDepth
                 || name == CONTINUATION_VARIABLE_NAME
                 || name == SUSPEND_FUNCTION_COMPLETION_PARAMETER_NAME
+                || name == AsmUtil.SUSPENSION_POINT_VARIABLE_PREFIX
     }
 
     private fun LocalVariableProxyImpl.remapThisVariableIfNeeded(customName: String? = null): LocalVariableProxyImpl {
